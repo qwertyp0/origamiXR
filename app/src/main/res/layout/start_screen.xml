@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/green_bg"
     android:orientation="vertical"
     android:padding="30dp">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="455dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/home_screen_bird" />
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/origami_bird" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,8 +54,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:background="@drawable/rounded_button"
+        android:background="@android:color/black"
+        android:onClick="sendToLogin"
         android:padding="15dp"
         android:text="@string/get_started"
-        android:textColor="@android:color/white" />
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
 </LinearLayout>
