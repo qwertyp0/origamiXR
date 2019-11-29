@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/splash_screen_layout"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/splash_screen_layout"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    android:padding="30dp">
+    android:padding="30dp"
+    tools:context=".StartScreen">
 
     <ImageView
         android:id="@+id/imageView"
@@ -38,23 +40,12 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/push_button"
-
-        android:background="@drawable/rounded_button"
-
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-
-
+        android:background="@drawable/rounded_button"
         android:onClick="sendToLogin"
-        android:padding="15dp"
-        android:text="@string/get_started"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-
-        android:textSize="20sp" />
+        android:text="Get Started" />
 
 
 </LinearLayout>
