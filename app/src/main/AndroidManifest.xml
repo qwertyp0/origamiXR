@@ -10,11 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name=".MainActivity" >
-            <intent-filter>
+        </activity>
+        <activity android:name=".StartScreen" >
+            <intent-filter> <!--Just move the intent filter tag into the main activity tag-->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LoginScreen" >
         </activity>
     </application>
 
