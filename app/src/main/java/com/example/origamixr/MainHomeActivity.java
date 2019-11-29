@@ -29,9 +29,9 @@ public class MainHomeActivity extends AppCompatActivity {
     *  Gallery
     * */
 
-    // private HomeFragment mHomeFragment = new HomeFragment();
-    // private SavedFragment mSavedFragment = new SavedFragment();
-    // private GalleryFragment mGalleryFragment = new GalleryFragment();
+    private HomeFragment mHomeFragment = new HomeFragment();
+    private SavedFragment mSavedFragment = new SavedFragment();
+    private GalleryFragment mGalleryFragment = new GalleryFragment();
     private DrawerLayout mDrawerLayout;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,7 @@ public class MainHomeActivity extends AppCompatActivity {
         mFragmentManager = getSupportFragmentManager();
 
         FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
+        mFragmentTransaction.replace(R.id.fragment_container, mHomeFragment);
         mFragmentTransaction.commit();
         mFragmentManager.executePendingTransactions();
 
@@ -62,23 +63,23 @@ public class MainHomeActivity extends AppCompatActivity {
 
         navigation.setOnNavigationItemSelectedListener(
             item -> {
-                FragmentTransaction mFragmentTransaction1 = mFragmentManager.beginTransaction();
+                FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
 
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         actionbar.setTitle("Home");
-                        // mFragmentTransaction1.replace(R.id.fragment_container, mHomeFragment);
+                        mFragmentTransaction.replace(R.id.fragment_container, mHomeFragment);
                         break;
                     case R.id.navigation_saved:
                         actionbar.setTitle("Saved");
-                        // mFragmentTransaction1.replace(R.id.fragment_container, mSavedFragment);
+                        mFragmentTransaction.replace(R.id.fragment_container, mSavedFragment);
                         break;
                     case R.id.navigation_gallery:
                         actionbar.setTitle("Gallery");
-                        // mFragmentTransaction1.replace(R.id.fragment_container, mGalleryFragment);
+                        mFragmentTransaction.replace(R.id.fragment_container, mGalleryFragment);
                 }
 
-                mFragmentTransaction1.commit();
+                mFragmentTransaction.commit();
                 mFragmentManager.executePendingTransactions();
                 return true;
             }
