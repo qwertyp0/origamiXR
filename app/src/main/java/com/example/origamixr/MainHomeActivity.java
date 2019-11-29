@@ -18,7 +18,8 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+// errors resolving this import
+// import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainHomeActivity extends AppCompatActivity {
 
@@ -57,11 +58,11 @@ public class MainHomeActivity extends AppCompatActivity {
         actionbar.setTitle("Home");
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        BottomNavigationView navigation = findViewById(R.id.navigation);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         NavigationView navigationView = findViewById(R.id.side_navigation);
 
 
-        navigation.setOnNavigationItemSelectedListener(
+        bottomNavigationView.setOnNavigationItemSelectedListener(
             item -> {
                 FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
 
@@ -89,8 +90,8 @@ public class MainHomeActivity extends AppCompatActivity {
             menuItem -> {
                 menuItem.setChecked(true);
                 mDrawerLayout.closeDrawers();
-                for (int i = 0; i < navigation.getMenu().size(); i++) {
-                    navigation.getMenu().getItem(i).setCheckable(false);
+                for (int i = 0; i < bottomNavigationView.getMenu().size(); i++) {
+                    bottomNavigationView.getMenu().getItem(i).setCheckable(false);
                 }
 
                 FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
