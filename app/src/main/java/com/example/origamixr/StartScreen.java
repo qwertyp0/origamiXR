@@ -18,5 +18,7 @@ public class StartScreen extends AppCompatActivity {
     {
         //Toast.makeText(getApplicationContext(), "Should go to start", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(getApplicationContext(), LoginScreen.class));
+
+        //overridePendingTransition();
     }
 }
