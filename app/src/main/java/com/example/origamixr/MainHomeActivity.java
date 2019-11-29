@@ -1,5 +1,7 @@
 package com.example.origamixr;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -113,7 +115,13 @@ public class MainHomeActivity extends AppCompatActivity {
                         // mFragmentTransaction.replace(R.id.fragment_container, );
                         break;
                     case R.id.sidebar_sign_out:
-
+                        SharedPreferences sharedPreferences =
+                                getSharedPreferences("Login", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove("logged_in");
+                        editor.commit();
+                        startActivity(new Intent(getApplicationContext(), StartScreen.class));
+                        this.finish();
                 }
                 mFragmentTransaction.commit();
                 mFragmentManager.executePendingTransactions();
