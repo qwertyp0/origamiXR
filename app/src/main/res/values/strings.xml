@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">origamiXR</string>
+    <string name="app_name">Origami XR</string>
+    <string name="sub_title">Learning Origami,\n Made Better!</string>
+    <string name="get_started">Get Started</string>
 </resources>
