@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sidebar_suggest"
+            android:icon="@drawable/ic_suggest"
+            android:title="Suggest"/>
+        <item
+            android:id="@+id/sidebar_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"/>
+        <item
+            android:id="@+id/sidebar_contact_us"
+            android:icon="@drawable/ic_person"
+            android:title="Contact Us"/>
+        <item
+            android:id="@+id/sidebar_about_us"
+            android:icon="@drawable/ic_info_outline_black"
+            android:title="About Us"/>
+        <item
+            android:id="@+id/sidebar_sign_out"
+            android:icon="@drawable/ic_person"
+            android:title="Sign Out"/>
+    </group>
+</menu>
