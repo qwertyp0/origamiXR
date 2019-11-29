@@ -1,16 +1,24 @@
 package com.example.origamixr;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainHomeActivity extends AppCompatActivity {
 
@@ -35,7 +43,6 @@ public class MainHomeActivity extends AppCompatActivity {
         mFragmentManager = getSupportFragmentManager();
 
         FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
-        // mFragmentTransaction.add(R.id.fragment_container, mHomeFragment);
         mFragmentTransaction.commit();
         mFragmentManager.executePendingTransactions();
 
@@ -46,11 +53,12 @@ public class MainHomeActivity extends AppCompatActivity {
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
-
+        actionbar.setTitle("Home");
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
         BottomNavigationView navigation = findViewById(R.id.navigation);
         NavigationView navigationView = findViewById(R.id.side_navigation);
+
 
         navigation.setOnNavigationItemSelectedListener(
             item -> {
@@ -112,6 +120,16 @@ public class MainHomeActivity extends AppCompatActivity {
             }
         );
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
