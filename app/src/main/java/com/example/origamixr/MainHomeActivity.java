@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import android.content.SharedPreferences;
 
 // errors resolving this import
 // import de.hdodenhof.circleimageview.CircleImageView;
@@ -66,8 +67,11 @@ public class MainHomeActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(
             item -> {
+                item.setChecked(true);
+                for (int i = 0; i < navigationView.getMenu().size(); i++) {
+                    navigationView.getMenu().getItem(i).setChecked(false);
+                }
                 FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
-
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         actionbar.setTitle("Home");
@@ -93,7 +97,7 @@ public class MainHomeActivity extends AppCompatActivity {
                 menuItem.setChecked(true);
                 mDrawerLayout.closeDrawers();
                 for (int i = 0; i < bottomNavigationView.getMenu().size(); i++) {
-                    bottomNavigationView.getMenu().getItem(i).setCheckable(false);
+                    bottomNavigationView.getMenu().getItem(i).setChecked(false);
                 }
 
                 FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
