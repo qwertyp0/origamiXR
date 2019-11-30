@@ -1,13 +1,18 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/RoundedSmall</item>
+        <item name="shapeAppearanceMediumComponent">@style/RoundedMedium</item>
+        <item name="shapeAppearanceLargeComponent">@style/RoundedLarge</item>
+
     </style>
 
 </resources>
