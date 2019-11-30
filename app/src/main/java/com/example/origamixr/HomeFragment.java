@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -24,7 +25,7 @@ public class HomeFragment extends Fragment {
             "9 steps | 20 minutes", "8 steps | 10 minutes",
             "5 steps | 5 minutes", "10 steps | 15 minutes"};
 
-    ListView listView;
+    GridView listView;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
