@@ -94,7 +94,7 @@
                         android:layout_height="50dp"
                         android:layout_marginRight="12dp"
                         android:src="@drawable/ic_profile_pic"
-                        android:tint="@color/colorPrimary" />
+                        android:tint="@color/gallery_color_1" />
 
                     <TextView
                         android:id="@+id/username_1"
@@ -143,7 +143,7 @@
                         android:layout_height="50dp"
                         android:layout_marginRight="12dp"
                         android:src="@drawable/ic_profile_pic"
-                        android:tint="@color/colorPrimary" />
+                        android:tint="@color/gallery_color_2" />
 
                     <TextView
                         android:id="@+id/username_2"
@@ -194,7 +194,7 @@
                         android:layout_height="50dp"
                         android:layout_marginRight="12dp"
                         android:src="@drawable/ic_profile_pic"
-                        android:tint="@color/colorPrimary" />
+                        android:tint="@color/gallery_color_3" />
 
                     <TextView
                         android:id="@+id/username_3"
@@ -245,7 +245,7 @@
                         android:layout_height="50dp"
                         android:layout_marginRight="12dp"
                         android:src="@drawable/ic_profile_pic"
-                        android:tint="@color/colorPrimary" />
+                        android:tint="@color/gallery_color_4" />
 
                     <TextView
                         android:id="@+id/username_4"
@@ -296,7 +296,7 @@
                         android:layout_height="50dp"
                         android:layout_marginRight="12dp"
                         android:src="@drawable/ic_profile_pic"
-                        android:tint="@color/colorPrimary" />
+                        android:tint="@color/gallery_color_5" />
 
                     <TextView
                         android:id="@+id/username_5"
