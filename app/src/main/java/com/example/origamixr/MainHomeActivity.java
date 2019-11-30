@@ -50,7 +50,6 @@ public class MainHomeActivity extends AppCompatActivity {
         mFragmentTransaction.replace(R.id.fragment_container, mHomeFragment);
         mFragmentTransaction.commit();
         mFragmentManager.executePendingTransactions();
-
     }
 
     private void setNavBars() {
@@ -123,6 +122,7 @@ public class MainHomeActivity extends AppCompatActivity {
                                 getSharedPreferences("Login", MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.remove("logged_in");
+                        editor.remove("username");
                         editor.commit();
                         startActivity(new Intent(getApplicationContext(), StartScreen.class));
                         this.finish();

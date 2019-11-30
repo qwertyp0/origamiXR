@@ -32,6 +32,7 @@ public class LoginScreen extends AppCompatActivity {
             SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean("logged_in", true);
+            editor.putString("username", username.getText().toString());
             editor.commit();
             startActivity(new Intent(getApplicationContext(), MainHomeActivity.class));
             this.finish();

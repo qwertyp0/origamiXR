@@ -13,6 +13,7 @@ public class StartScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Autologs in for testing purposes
         SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
         if (sharedPreferences.getBoolean("logged_in", false)) {
             startActivity(new Intent(getApplicationContext(), MainHomeActivity.class));
