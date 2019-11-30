@@ -6,4 +6,10 @@
     <string name="home">Home</string>
     <string name="saved">Saved</string>
     <string name="Gallery">Gallery</string>
+
+    <string name="gallery_name_1">Yan Wang</string>
+    <string name="gallery_name_2">Quinn Morris</string>'
+    <string name="gallery_name_3">Rijuta Dighe</string>
+    <string name="gallery_name_4">Lucian Lum</string>
+    <string name="gallery_name_5">Wallace Loh</string>
 </resources>
