@@ -20,6 +20,11 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import android.content.SharedPreferences;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 // errors resolving this import
 // import de.hdodenhof.circleimageview.CircleImageView;
@@ -37,6 +42,18 @@ public class MainHomeActivity extends AppCompatActivity {
     private SavedFragment mSavedFragment = new SavedFragment();
     private GalleryFragment mGalleryFragment = new GalleryFragment();
     private DrawerLayout mDrawerLayout;
+
+    public static int[] origamiDesigns = {R.drawable.airplane, R.drawable.sailboat,
+            R.drawable.tulip, R.drawable.butterfly, R.drawable.frog,
+            R.drawable.crane, R.drawable.pinwheel, R.drawable.dog};
+    public static String[] origamiTitles = {"Airplane", "Boat", "Tulip", "Butterfly",
+            "Frog", "Crane", "Pinwheel", "Dog"};
+    public static String[] origamiInfo = {"5 steps | 5 minutes", "7 steps | 5 minutes",
+            "10 steps | 15 minutes", "8 steps | 15 minutes",
+            "9 steps | 20 minutes", "8 steps | 10 minutes",
+            "5 steps | 5 minutes", "10 steps | 15 minutes"};
+
+    public static int savedDesigns = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,7 +101,6 @@ public class MainHomeActivity extends AppCompatActivity {
                         actionbar.setTitle("Gallery");
                         mFragmentTransaction.replace(R.id.fragment_container, mGalleryFragment);
                 }
-
                 mFragmentTransaction.commit();
                 mFragmentManager.executePendingTransactions();
                 return true;
