@@ -18,6 +18,8 @@
         <activity android:name=".MainHomeActivity">
 
         </activity>
+
+
         <activity android:name=".LoginScreen"></activity>
 
     </application>

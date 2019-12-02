@@ -54,7 +54,7 @@
                         android:layout_toRightOf="@+id/profile_image_user"
                         android:background="@android:color/transparent"
                         android:fontFamily="sans-serif-medium"
-                        android:text="@string/gallery_name_1"
+                        android:text="User"
                         android:textColor="@android:color/black"
                         android:textSize="8.5pt" />
                 </RelativeLayout>
@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/gallery_header_user"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/gallery_image_1" />
+                    android:src="@drawable/gallery_image_5" />
             </RelativeLayout>
 
             <!--End of USER'S image in gallery-->
