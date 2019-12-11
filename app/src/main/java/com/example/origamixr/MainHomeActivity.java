@@ -32,11 +32,6 @@ import java.util.Map;
 public class MainHomeActivity extends AppCompatActivity {
 
     private FragmentManager mFragmentManager;
-    /* TODO create the three fragments
-    *  Home
-    *  Saved
-    *  Gallery
-    * */
 
     private HomeFragment mHomeFragment = new HomeFragment();
     private SavedFragment mSavedFragment = new SavedFragment();
@@ -80,6 +75,8 @@ public class MainHomeActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         NavigationView navigationView = findViewById(R.id.side_navigation);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(
             item -> {
@@ -134,9 +131,6 @@ public class MainHomeActivity extends AppCompatActivity {
                         // mFragmentTransaction.replace(R.id.fragment_container, );
                         break;
                     case R.id.sidebar_sign_out:
-                        SharedPreferences sharedPreferences =
-                                getSharedPreferences("Login", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.remove("logged_in");
                         editor.remove("username");
                         editor.commit();
@@ -149,7 +143,6 @@ public class MainHomeActivity extends AppCompatActivity {
                 return true;
             }
         );
-
     }
 
     @Override

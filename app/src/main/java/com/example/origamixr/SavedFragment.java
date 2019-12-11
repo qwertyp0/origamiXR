@@ -37,7 +37,7 @@ public class SavedFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(view.getContext(), MainHomeActivity.origamiTitles[position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(view.getContext(), MainHomeActivity.origamiTitles[position], Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -82,7 +82,7 @@ public class SavedFragment extends Fragment {
                         savedDesigns.remove(MainHomeActivity.origamiTitles[index]);
                         editor.commit();
                         notifyDataSetChanged();
-                        Toast.makeText(buttonView.getContext(), "Removed " + txtView.getText().toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(buttonView.getContext(), "Removed " + txtView.getText().toString(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });

@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(view.getContext(), "This is the " + MainHomeActivity.origamiTitles[position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(view.getContext(), "This is the " + MainHomeActivity.origamiTitles[position], Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -88,13 +88,13 @@ public class HomeFragment extends Fragment {
                         editor.putInt(MainHomeActivity.origamiTitles[position], position);
                         SavedFragment.savedDesigns.add(MainHomeActivity.origamiTitles[position]);
                         editor.commit();
-                        Toast.makeText(buttonView.getContext(), "Saved " + txtView.getText().toString() + " with index: " + position, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(buttonView.getContext(), "Saved " + txtView.getText().toString() + " with index: " + position, Toast.LENGTH_SHORT).show();
                     }
                     else {
                         editor.remove(MainHomeActivity.origamiTitles[position]);
                         SavedFragment.savedDesigns.remove(MainHomeActivity.origamiTitles[position]);
                         editor.commit();
-                        Toast.makeText(buttonView.getContext(), "Removed " + txtView.getText().toString() + " from saved  with index: " + position, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(buttonView.getContext(), "Removed " + txtView.getText().toString() + " from saved  with index: " + position, Toast.LENGTH_SHORT).show();
                     }
 
                 }
