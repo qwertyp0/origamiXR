@@ -1,6 +1,7 @@
 package com.example.origamixr;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,6 +21,8 @@ import androidx.fragment.app.Fragment;
 import java.util.HashMap;
 import java.util.Map;
 
+import kotlin.text.Regex;
+
 import static android.content.Context.MODE_PRIVATE;
 
 public class HomeFragment extends Fragment {
@@ -33,10 +36,16 @@ public class HomeFragment extends Fragment {
         CustomAdapter adapter = new CustomAdapter();
         listView.setAdapter(adapter);
 
+        // TODO: start activity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(view.getContext(), "This is the " + MainHomeActivity.origamiTitles[position], Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), InstructionStartActivity.class);
+                intent.putExtra("title", MainHomeActivity.origamiTitles[position]);
+                intent.putExtra("info", MainHomeActivity.origamiInfo[position]);
+                intent.putExtra("design", MainHomeActivity.origamiDesigns[position]);
+                startActivity(intent);
             }
         });
 

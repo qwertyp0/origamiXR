@@ -34,6 +34,7 @@ public class SavedFragment extends Fragment {
         CustomAdapter adapter = new CustomAdapter();
         listView.setAdapter(adapter);
 
+        // TODO: start activity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

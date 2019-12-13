@@ -77,8 +77,9 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/Path 804" />
+            app:layout_constraintVertical_bias="1.0" />
+            <!-- Line fails to link resource, so removed -->
+            <!-- app:srcCompat="@drawable/Path 804" />-->
 
         <EditText
             android:id="@+id/editText3"
